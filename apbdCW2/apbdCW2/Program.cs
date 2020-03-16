@@ -10,28 +10,29 @@ namespace cw02
 
         public static void ErrorLogging(Exception e)
         {
-             string logpath = @"C:\Users\awiercinska\Desktop\APBD\APBD1\cw02\logs.txt";
-                if (File.Exists(logpath))
-                {
-                    File.Create(logpath).Dispose();
-                }
-                StreamWriter sw = File.AppendText(logpath);
-                sw.WriteLine("Logging error");
-                sw.WriteLine("Start " + DateTime.Now);
-                sw.WriteLine("Error " + e.Message);
-                sw.WriteLine("End " + DateTime.Now);
-                sw.Close();
-           
+            string logpath = @"C:\Users\awiercinska\Desktop\APBD\APBD1\apbdCW2\logs.txt";
+            if (File.Exists(logpath))
+            {
+                File.Create(logpath).Dispose();
+            }
+            StreamWriter sw = File.AppendText(logpath);
+            sw.WriteLine("Logging error");
+            sw.WriteLine("Start " + DateTime.Now);
+            sw.WriteLine("Error " + e.Message);
+            sw.WriteLine("End " + DateTime.Now);
+            sw.Close();
+
         }
 
         static void Main(string[] args)
         {
             try
             {
-               
-                    string csvPath = Console.ReadLine(); //"C:\Users\s18710\Desktop\APBD1\cw02\dane.csv"
-                    string xmlPath = Console.ReadLine(); //"C:\Users\s18710\Desktop\APBD1\"
-                    string format = Console.ReadLine(); //xml
+
+                string csvPath = Console.ReadLine(); //"C:\Users\s18710\Desktop\APBD1\cw02\dane.csv"
+                //"C:\Users\awiercinska\Desktop\APBD\APBD1\apbdCW2\dane.csv"
+                string xmlPath = Console.ReadLine(); //"C:\Users\s18710\Desktop\APBD1\"
+                string format = Console.ReadLine(); //xml
 
                 if (File.Exists(csvPath) && Directory.Exists(xmlPath))
                 {
