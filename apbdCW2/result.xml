@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Uczelnia>
+<Uczelnia createdAt="2020-03-16T00:00:00+01:00" author="Alicja Wiercinska">
   <studenci>
     <student indexNumber="s459">
       <fname>Paweł</fname>
@@ -133,30 +133,6 @@
         <mode>Dzienne</mode>
       </studies>
     </student>
-    <student indexNumber="s4450">
-      <fname>Zbigniew</fname>
-      <lname>Kowalski35</lname>
-      <birthday>2000-02-12</birthday>
-      <email>35@pjwstk.edu.pl</email>
-      <mothersName>Alina</mothersName>
-      <fathersName>Adam</fathersName>
-      <studies>
-        <name>Sztuka Nowych Mediów dzienne</name>
-        <mode></mode>
-      </studies>
-    </student>
-    <student indexNumber="s4455">
-      <fname>Karolina</fname>
-      <lname>Nowak36</lname>
-      <birthday>2000-02-12</birthday>
-      <email>36@pjwstk.edu.pl</email>
-      <mothersName>Alina</mothersName>
-      <fathersName>Adam</fathersName>
-      <studies>
-        <name>Sztuka Nowych Mediów dzienne</name>
-        <mode></mode>
-      </studies>
-    </student>
     <student indexNumber="s4799">
       <fname>Joanna</fname>
       <lname>Brzęczyszczykiewicz37</lname>
@@ -263,18 +239,6 @@
       <studies>
         <name>Sztuka Nowych Mediów zaoczne</name>
         <mode>Zaoczne</mode>
-      </studies>
-    </student>
-    <student indexNumber="s4434">
-      <fname>Aleksandra</fname>
-      <lname></lname>
-      <birthday>2000-02-12</birthday>
-      <email>42@pjwstk.edu.pl</email>
-      <mothersName>Alina</mothersName>
-      <fathersName>Adam</fathersName>
-      <studies>
-        <name>Sztuka Nowych Mediów dzienne</name>
-        <mode>Dzienne</mode>
       </studies>
     </student>
     <student indexNumber="s4434">
@@ -1090,18 +1054,6 @@
       <fathersName>Adam</fathersName>
       <studies>
         <name>Sztuka Nowych Mediów dzienne</name>
-        <mode>Dzienne</mode>
-      </studies>
-    </student>
-    <student indexNumber="s4756">
-      <fname>Jolanta</fname>
-      <lname>Nowak96</lname>
-      <birthday>2000-02-12</birthday>
-      <email>96@pjwstk.edu.pl</email>
-      <mothersName></mothersName>
-      <fathersName></fathersName>
-      <studies>
-        <name>Sztuka Nowych Mediów uzupełniające magisterskie</name>
         <mode>Dzienne</mode>
       </studies>
     </student>
@@ -3602,4 +3554,25 @@
       </studies>
     </student>
   </studenci>
+  <activeStudies>
+    <studies name="Informatyka dzienne" numberOfStudents="106" />
+    <studies name="Informatyka magisterskie 4 sem" numberOfStudents="1" />
+    <studies name="Informatyka doktoranckie" numberOfStudents="2" />
+    <studies name="Sztuka Nowych Mediów dzienne" numberOfStudents="65" />
+    <studies name="Sztuka Nowych Mediów uzupełniające magisterskie" numberOfStudents="14" />
+    <studies name="Sztuka Nowych Mediów zaoczne" numberOfStudents="5" />
+    <studies name="Sztuka Nowych Mediów zaoczne 6 sem." numberOfStudents="2" />
+    <studies name="Informatyka dzienne po angielsku" numberOfStudents="30" />
+    <studies name="Informatyka magisterskie 3 sem" numberOfStudents="33" />
+    <studies name="Informatyka zaoczne" numberOfStudents="16" />
+    <studies name="Zarządzanie informacją dzienne (kierunek Zarządzanie)" numberOfStudents="1" />
+    <studies name="Informatyka internetowe" numberOfStudents="8" />
+    <studies name="Informatyka magisterskie uzupełniające zaoczne" numberOfStudents="3" />
+    <studies name="Informatyka jednolite magisterskie" numberOfStudents="3" />
+    <studies name="Informatyka jednolite magisterskie po angielsku" numberOfStudents="2" />
+    <studies name="Informatyka Społeczna" numberOfStudents="2" />
+    <studies name="Informatyka internetowe magisterskie" numberOfStudents="1" />
+    <studies name="Informatyka wieczorowe" numberOfStudents="1" />
+    <studies name="MBA dla branży IT" numberOfStudents="1" />
+  </activeStudies>
 </Uczelnia>

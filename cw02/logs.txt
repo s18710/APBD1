@@ -1,4 +1,0 @@
-Logging error
-Start 2020-03-10 11:28:34
-Error File does not exist
-End 2020-03-10 11:28:34
