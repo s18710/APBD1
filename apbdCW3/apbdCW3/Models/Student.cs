@@ -10,8 +10,11 @@ namespace apbdCW3.Models
         public int IdStudent { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-
         public string indexNumber { get; set; }
+
+        public string idEnrollment { get; set; }
+
+        public string birthDate { get; set; }
 
     }
 }
