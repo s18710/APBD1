@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using apbdCW3.DAL;
 using apbdCW3.middleware;
 using apbdCW3.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -29,9 +30,18 @@ namespace apbdCW3
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+
+                });
+
             services.AddTransient<IStudentsDbService, SqlServerDbService>();
             //singleton
-            services.AddControllers();
+            services.AddControllers()
+                .AddXmlSerializerFormatters();
+         
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
