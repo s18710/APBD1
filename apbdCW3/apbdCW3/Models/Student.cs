@@ -14,6 +14,11 @@ namespace apbdCW3.Models
 
         public string idEnrollment { get; set; }
 
+<<<<<<< HEAD
+=======
+        public string Studies { get; set; }
+
+>>>>>>> f41ae42a239a8e2472786dba5817d6d9cb350d20
         public string birthDate { get; set; }
 
     }

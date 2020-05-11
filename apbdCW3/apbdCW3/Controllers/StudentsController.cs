@@ -8,6 +8,10 @@ using Microsoft.AspNetCore.Mvc;
 using System.Data;
 using System.Data.SqlClient;
 using System.Collections;
+<<<<<<< HEAD
+=======
+using apbdCW3.Services;
+>>>>>>> f41ae42a239a8e2472786dba5817d6d9cb350d20
 
 namespace apbdCW3.Controllers
 {   
@@ -15,15 +19,23 @@ namespace apbdCW3.Controllers
     [Route("api/students")]
     public class StudentsController : ControllerBase
     {
+        private readonly SqlServerDbService dbService;
 
+<<<<<<< HEAD
                public StudentsController()
         {
+=======
+        public StudentsController(SqlServerDbService db)
+        {
+            dbService = db;
+>>>>>>> f41ae42a239a8e2472786dba5817d6d9cb350d20
         }
 
         
         [HttpGet("student/{id}")]
         public IActionResult getStudent(int id)
         {
+<<<<<<< HEAD
             Student st = new Student();
             using (var client = new SqlConnection("Data Source=db-mssql;Initial Catalog=s18710;Integrated Security=True"))
             using (var com = new SqlCommand())
@@ -73,11 +85,21 @@ namespace apbdCW3.Controllers
 
             }
             return Ok(e);
+=======
+            return Ok(dbService.getStudent(id));
+        }
+
+        [HttpGet("getEnrollment/{id}")]
+        public IActionResult getEnrollment(int id)
+        {
+            return Ok(dbService.getEnrollment(id));
+>>>>>>> f41ae42a239a8e2472786dba5817d6d9cb350d20
         }
 
         [HttpGet]
         public IActionResult getStudents(string orderBy)
         {
+<<<<<<< HEAD
             ArrayList students = new ArrayList();
             using (var client = new SqlConnection("Data Source=db-mssql;Initial Catalog=s18710;Integrated Security=True"))
             using(var com = new SqlCommand())
@@ -100,11 +122,23 @@ namespace apbdCW3.Controllers
 
             }
             return Ok(students);
+=======
+            ArrayList array = dbService.getStudents(orderBy);
+            if (array != null)
+            {
+                return Ok(array);
+            }
+            else
+            {
+                return BadRequest();
+            }
+>>>>>>> f41ae42a239a8e2472786dba5817d6d9cb350d20
         }
 
         [HttpPost]
         public IActionResult addStudent(Student student)
         {
+<<<<<<< HEAD
             int x;
             using (var client = new SqlConnection("Data Source=db-mssql;Initial Catalog=s18710;Integrated Security=True"))
             using (var com = new SqlCommand())
@@ -132,6 +166,16 @@ namespace apbdCW3.Controllers
             else
             {
                 return Ok("success");
+=======
+            Boolean b = dbService.addStudent(student);
+            if (b)
+            {
+                return Ok();
+            }
+            else
+            {
+                return NotFound();
+>>>>>>> f41ae42a239a8e2472786dba5817d6d9cb350d20
             }
         }
 
@@ -144,6 +188,7 @@ namespace apbdCW3.Controllers
         [HttpDelete("{id}")]
         public IActionResult deleteStudent(int id)
         {
+<<<<<<< HEAD
             int x;
             using (var client = new SqlConnection("Data Source=db-mssql;Initial Catalog=s18710;Integrated Security=True"))
             using (var com = new SqlCommand())
@@ -166,6 +211,16 @@ namespace apbdCW3.Controllers
             else
             {
                 return Ok("success");
+=======
+            Boolean b = dbService.deleteStudent(id);
+            if (b)
+            {
+                return Ok();
+            }
+            else
+            {
+                return NotFound();
+>>>>>>> f41ae42a239a8e2472786dba5817d6d9cb350d20
             }
         }
     }
