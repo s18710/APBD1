@@ -2,3 +2,4 @@ Logging error
 Start 16.03.2020 20:59:09
 Error Error some columns are empty
 End 16.03.2020 20:59:09
+
